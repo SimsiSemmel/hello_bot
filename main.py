@@ -36,7 +36,7 @@ def post_webhook():
                     sender_id = messaging_event['sender']['id']
 
                     if 'text' in messaging_event['message']:
-                    
+                        message_text = messaging_event['message']['text']
 
                         do_rules(sender_id, message_text)
 
